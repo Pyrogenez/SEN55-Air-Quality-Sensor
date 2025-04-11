@@ -13,7 +13,7 @@ PR for the Waveshare 4.2 rev2.2 screens: https://github.com/esphome/esphome/pull
 <br><br/>
 ## Part 1 - SEN55, ESP32, and Home Assistant 
 ### Step 1: 
-Connect your esp32 to your computer using a usb-c in the port labelled "COM".
+
 ### Step 2:
 <br><br/>
 To be continued... 
