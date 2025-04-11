@@ -5,9 +5,12 @@ external_components:
 esphome:
   name: air-quality-sensor
   friendly_name: Air Quality Sensor
+  platformio_options:
+    board_build.arduino.memory_type: qio_opi
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
   framework:
     type: arduino
 
@@ -17,10 +20,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "yourkey"
+    key: !secret api_key
 
 ota:
-  password: "yourpassword"
+  platform: esphome
+  password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
@@ -29,7 +33,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Air-Quality-Sensor"
-    password: yourpwd
+    password: SetMeUpB!
 
 captive_portal:
 
